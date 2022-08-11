@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.example.msa_oaid_kit">
+
+    <application
+        android:name=".OAIDApplication">
+
+    </application>
+</manifest>
