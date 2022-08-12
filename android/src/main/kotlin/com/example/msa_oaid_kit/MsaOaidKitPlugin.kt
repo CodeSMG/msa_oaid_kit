@@ -27,11 +27,11 @@ class MsaOaidKitPlugin : FlutterPlugin, MethodCallHandler {
     }
 
     override fun onMethodCall(@NonNull call: MethodCall, @NonNull result: Result) {
-        if (call.method == "getPlatformVersion") {
-            result.success("Android ${android.os.Build.VERSION.RELEASE}")
-        } else {
-            result.notImplemented()
-        }
+//        if (call.method == "getPlatformVersion") {
+//            result.success("Android ${android.os.Build.VERSION.RELEASE}")
+//        } else {
+//            result.notImplemented()
+//        }
 
         if (call.method == "getOaid") {
             demoHelper = DemoHelper(object : AppIdsUpdater {
@@ -43,6 +43,8 @@ class MsaOaidKitPlugin : FlutterPlugin, MethodCallHandler {
                 }
             })
             demoHelper.getDeviceIds(applicationContext, true, false, false)
+        }else {
+            result.notImplemented()
         }
     }
 

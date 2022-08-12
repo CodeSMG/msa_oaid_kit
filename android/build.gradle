@@ -6,6 +6,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven {url uri(new File(rootDir,'oaid_tool'))}
     }
 
     dependencies {
@@ -18,6 +19,12 @@ rootProject.allprojects {
     repositories {
         google()
         mavenCentral()
+
+        maven {url uri(new File(rootDir,'oaid_tool'))}
+        // 私仓
+        flatDir {
+            dirs "$rootDir/oaid_tool"
+        }
     }
 }
 
@@ -55,5 +62,6 @@ android {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
-    implementation files('libs/oaid_sdk_1.2.1.aar')
+    implementation(name: 'oaid_sdk_1.2.1', ext: 'aar')
+//    implementation project(":oaid_tool")
 }
