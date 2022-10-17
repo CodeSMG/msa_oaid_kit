@@ -37,13 +37,8 @@ flutter:
       android:
         package: com.example.msa_oaid_kit
         pluginClass: MsaOaidKitPlugin
-<<<<<<< Updated upstream
   #    ios:
   #      pluginClass: MsaOaidKitPlugin
-=======
-#      ios:
-#        pluginClass: MsaOaidKitPlugin
->>>>>>> Stashed changes
 
   # To add assets to your plugin package, add an assets section, like this:
   # assets:
